@@ -1,8 +1,70 @@
 import './page-02.css'
 import '../Pages.css'
 
-export function Page02(){
+import { useContext } from 'react'
+import { MyContext } from '../../../Context/formValues'
 
+export function Page02(){
+    const {formValues, setFormValues} = useContext(MyContext)
+
+    const selectButton = (e) => {
+        setFormValues({...formValues, skill: e.target.id})
+
+        const beginner = document.getElementById('Beginner')
+        const intermediate = document.getElementById('Intermediate')
+        const advanced = document.getElementById('Advanced')
+        const expert = document.getElementById('Expert')
+
+        if( e.target.id == 'Beginner'){
+            e.target.style.backgroundColor = '#fc6c4c'
+            e.target.style.color = '#fff'
+
+            intermediate.style.backgroundColor = '#fff'
+            intermediate.style.color = '#111'
+            advanced.style.backgroundColor = '#fff'
+            advanced.style.color = '#111'
+            expert.style.backgroundColor = '#fff'
+            expert.style.color = '#111'
+        }
+
+        if( e.target.id == 'Intermediate'){
+            e.target.style.backgroundColor = '#fc6c4c'
+            e.target.style.color = '#fff'
+
+            beginner.style.backgroundColor = '#fff'
+            beginner.style.color = '#111'
+            advanced.style.backgroundColor = '#fff'
+            advanced.style.color = '#111'
+            expert.style.backgroundColor = '#fff'
+            expert.style.color = '#111'
+        }
+
+        if( e.target.id == 'Advanced'){
+            e.target.style.backgroundColor = '#fc6c4c'
+            e.target.style.color = '#fff'
+
+            intermediate.style.backgroundColor = '#fff'
+            intermediate.style.color = '#111'
+            beginner.style.backgroundColor = '#fff'
+            beginner.style.color = '#111'
+            expert.style.backgroundColor = '#fff'
+            expert.style.color = '#111'
+        }
+
+        if( e.target.id == 'Expert'){
+            e.target.style.backgroundColor = '#fc6c4c'
+            e.target.style.color = '#fff'
+
+            intermediate.style.backgroundColor = '#fff'
+            intermediate.style.color = '#111'
+            advanced.style.backgroundColor = '#fff'
+            advanced.style.color = '#111'
+            beginner.style.backgroundColor = '#fff'
+            beginner.style.color = '#111'
+        }
+
+        console.log(formValues.skill)
+    }
     return(
         <section id="page-02">
             <div className="title-page">
@@ -12,10 +74,10 @@ export function Page02(){
             </div>
 
             <div className='form'>
-                <button>Beginner</button>
-                <button>Intermediate</button>
-                <button>Advanced</button>
-                <button>Expert</button>
+                <button id='Beginner' onClick={selectButton}>Beginner</button>
+                <button id='Intermediate' onClick={selectButton}>Intermediate</button>
+                <button id='Advanced' onClick={selectButton}>Advanced</button>
+                <button id='Expert' onClick={selectButton}>Expert</button>
             </div>
 
             <div className='div-bar'></div>

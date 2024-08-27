@@ -4,7 +4,7 @@ export const MyContext = createContext()
 
 const MyProvider = ({children}) => {
     const [formValues, setFormValues] = useState({
-        nome: 'yuri',
+        nome: '',
         email: '',
         phone: '',
         skill: '',
