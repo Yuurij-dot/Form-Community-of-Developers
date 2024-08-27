@@ -2,9 +2,11 @@ import './page-02.css'
 import '../Pages.css'
 
 export function Page02(){
+
     return(
         <section id="page-02">
             <div className="title-page">
+                <h1></h1>
                 <h1>Skill Level</h1>
                 <span>Please tell us about your skill level in frontend development.</span>
             </div>
