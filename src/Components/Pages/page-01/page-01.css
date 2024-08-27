@@ -1,0 +1,23 @@
+.form div span{
+    font-size: 12px;
+    font-weight: 600;
+}
+.form div input{
+    height: 40px;
+
+    outline: none;
+    padding-left: 10px;
+    border-radius: 8px;
+    border: 1px solid #cecece;
+
+    font-size: 12px;
+    transition: .3s ease;
+}
+.form div input:hover{
+    border: 1px solid #fc6c4c;
+}
+.form div input:focus{
+    border: 1px solid #fc6c4c;
+}
+
+

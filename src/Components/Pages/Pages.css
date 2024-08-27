@@ -1,0 +1,62 @@
+section{
+    display: none;
+}
+
+#page-01{
+    display: block;
+}
+
+.title-page{
+    margin: 20px 0;
+}
+.title-page h1{
+    font-weight: 500;
+    font-size: 18px;
+}
+.title-page span{
+    font-size: 12px;
+    font-weight: 500;
+    color: #757575;
+}
+
+.form{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.form div{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.button-div{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-div button{
+    
+    width: 100px;
+    height: 40px;
+
+    outline: none;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+
+    background-color: #fc6c4c;
+    cursor: pointer;
+}
+.button-div button:hover{
+    background-color: #fc5d39;
+}
