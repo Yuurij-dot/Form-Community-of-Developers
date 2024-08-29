@@ -4,6 +4,8 @@ import './page-01.css'
 import { useContext } from 'react'
 import { MyContext } from '../../../Context/formValues'
 
+import { nextPage } from './togglePages'
+
 export function Page01(){
     const {formValues, setFormValues} = useContext(MyContext)
 
@@ -29,17 +31,17 @@ export function Page01(){
             <div className='form'>
                 <div>
                     <span>Full Name</span>
-                    <input type="text" placeholder="Your Name" onChange={handleNome} />
+                    <input required type="text" placeholder="Your Name" onChange={handleNome} />
                 </div>
 
                 <div>
                     <span>Email Address</span>
-                    <input type="text" placeholder="Your Name" onChange={handleEmail}/>
+                    <input required type="email" placeholder="Your Name" onChange={handleEmail}/>
                 </div>
 
                 <div>
                     <span>Phone Number</span>
-                    <input type="text" placeholder="Your Name" onChange={handlePhone}/>
+                    <input required type="text" placeholder="Your Name" onChange={handlePhone}/>
                 </div>
 
             </div>
@@ -47,7 +49,7 @@ export function Page01(){
             <div className='div-bar'></div>
 
             <div className='button-div'>
-                <button>Next Step</button>  
+                <button onClick={nextPage}>Next Step</button>  
             </div>         
         </section>
     )

@@ -1,0 +1,23 @@
+.content-confirm{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.box-confirm{
+    background-color: #e5e7eb;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.box-confirm h1{
+    font-size: 12px;
+    font-weight: 500;
+    color: #6e6e6e;
+}
+.box-confirm span{
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+}

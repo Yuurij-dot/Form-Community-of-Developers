@@ -4,6 +4,8 @@ import '../Pages.css'
 import { useContext } from 'react'
 import { MyContext } from '../../../Context/formValues'
 
+import { backPage, nextPage } from './togglePages'
+
 export function Page02(){
     const {formValues, setFormValues} = useContext(MyContext)
 
@@ -62,8 +64,6 @@ export function Page02(){
             beginner.style.backgroundColor = '#fff'
             beginner.style.color = '#111'
         }
-
-        console.log(formValues.skill)
     }
     return(
         <section id="page-02">
@@ -83,8 +83,8 @@ export function Page02(){
             <div className='div-bar'></div>
 
             <div className='button-div'>
-                <button>Go Back</button>
-                <button>Next Step</button>  
+                <button onClick={backPage}>Go Back</button>
+                <button onClick={nextPage}>Next Step</button>  
             </div> 
         </section>
     )
