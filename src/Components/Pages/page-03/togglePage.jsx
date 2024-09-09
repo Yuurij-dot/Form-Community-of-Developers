@@ -10,7 +10,14 @@ export const nextPage = (e) => {
     page04.style.display = 'block'
 
     contentLevel03.style.backgroundColor = '#fc6c4c'  
-    button04.style.backgroundColor = '#fc6c4c'          
+    button04.style.backgroundColor = '#fc6c4c'    
+    
+    
+    // Reset Buttons
+
+    const erroSpan = document.getElementById('erro-span-page3')
+
+    erroSpan.style.display = 'none'
 }
 
 export const backPage = (e) => {
@@ -26,4 +33,10 @@ export const backPage = (e) => {
 
     contentLevel02.style.backgroundColor = '#e5e7eb'  
     button03.style.backgroundColor = '#e5e7eb'          
+}
+
+export const erroPage = (e) => {
+    const erroSpan = document.getElementById('erro-span-page3')
+    
+    erroSpan.style.display = 'block'
 }

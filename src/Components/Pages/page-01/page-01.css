@@ -21,3 +21,7 @@
 }
 
 
+#erro-span{
+    display: none;
+    color: red;
+}

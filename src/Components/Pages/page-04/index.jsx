@@ -38,13 +38,7 @@ export function Page04(){
 
                 <div className="box-confirm">
                     <h1>Challenge Preference</h1>
-                    <ul>
-                        {
-                            formValues.chalenge.map((values, index) => (
-                                <li key={index}>{values}</li>
-                            ))
-                        }
-                    </ul>
+                    <span>{formValues.chalenge}</span>
                 </div>
             </div>
 

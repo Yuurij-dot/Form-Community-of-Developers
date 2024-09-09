@@ -85,25 +85,25 @@ export default function LevelForm(){
     return(
         <div className='level-form'>
             <div className="level level-01">
-                <button id='button01' onClick={changePage}>1</button>
+                <button id='button01'>1</button>
             </div>
 
             <div id='content-level-01' className="content-level content-level-01"></div>
 
             <div className="level level-02">
-                <button id='button02' onClick={changePage}>2</button>
+                <button id='button02'>2</button>
             </div>
 
             <div id='content-level-02' className="content-level content-level-02"></div>
 
             <div className="level level-03">
-                <button id='button03' onClick={changePage}>3</button>
+                <button id='button03'>3</button>
             </div>
             
             <div id='content-level-03' className="content-level content-level-03"></div>
 
             <div className="level level-04">
-                <button id='button04' onClick={changePage}>4</button>
+                <button id='button04'>4</button>
             </div>
         </div>
     )

@@ -4,80 +4,91 @@ import '../Pages.css'
 import { useContext } from 'react'
 import { MyContext } from '../../../Context/formValues'
 
-import { backPage, nextPage } from './togglePage'
+import { backPage, nextPage, erroPage } from './togglePage'
 
 export function Page03(){
     const {formValues, setFormValues} = useContext(MyContext)
     
-    const toggleButton = (e) => {
-        const htmlCheckbox = document.getElementById('html-checkbox')
-        const reactCheckbox = document.getElementById('react-checkbox')
-        const vueCheckbox = document.getElementById('vue-checkbox')
-        const angularCheckbox = document.getElementById('angular-checkbox')
+    const selectButton = (e) => {
 
-        if(e.target.id == 'html-box'){
-            htmlCheckbox.checked = !htmlCheckbox.checked
-            
-            // setFormValues(prevState => ({
-            //     ...prevState,
-            //     chalenges: 'HTML/CSS/JS'
-            // }))
-            // console.log(formValues.chalenges)
+        setFormValues({...formValues, chalenge: e.target.name})
+        // console.log(e.target.name)
 
+        const html = document.getElementById('html')
+        const react = document.getElementById('react')
+        const angular = document.getElementById('angular')
+        const vue = document.getElementById('vue')
 
-            // Adicionar os arrays
-            // Criar uma validacao
-        }
-        
-        if(e.target.id == 'react-box'){
-            reactCheckbox.checked = !reactCheckbox.checked
+        if( e.target.id == 'html'){
+            e.target.style.backgroundColor = '#fc6c4c'
+            e.target.style.color = '#fff'
+
+            react.style.backgroundColor = '#fff'
+            react.style.color = '#111'
+            angular.style.backgroundColor = '#fff'
+            angular.style.color = '#111'
+            vue.style.backgroundColor = '#fff'
+            vue.style.color = '#111'
         }
 
-        if(e.target.id == 'algular-box'){
-            angularCheckbox.checked = !angularCheckbox.checked
+        if( e.target.id == 'react'){
+            e.target.style.backgroundColor = '#fc6c4c'
+            e.target.style.color = '#fff'
+
+            html.style.backgroundColor = '#fff'
+            html.style.color = '#111'
+            angular.style.backgroundColor = '#fff'
+            angular.style.color = '#111'
+            vue.style.backgroundColor = '#fff'
+            vue.style.color = '#111'
         }
 
-        if(e.target.id == 'vue-box'){
-            vueCheckbox.checked = !vueCheckbox.checked
+        if( e.target.id == 'angular'){
+            e.target.style.backgroundColor = '#fc6c4c'
+            e.target.style.color = '#fff'
+
+            react.style.backgroundColor = '#fff'
+            react.style.color = '#111'
+            html.style.backgroundColor = '#fff'
+            html.style.color = '#111'
+            vue.style.backgroundColor = '#fff'
+            vue.style.color = '#111'
         }
 
-        console.log(formValues.chalenge)
+        if( e.target.id == 'vue'){
+            e.target.style.backgroundColor = '#fc6c4c'
+            e.target.style.color = '#fff'
+
+            react.style.backgroundColor = '#fff'
+            react.style.color = '#111'
+            angular.style.backgroundColor = '#fff'
+            angular.style.color = '#111'
+            html.style.backgroundColor = '#fff'
+            html.style.color = '#111'
+        }
 
     }
+
     return(
         <section id="page-03">
             <div className="title-page">
                 <h1>Chalenge Preference</h1>
                 <span>Please tell us which frontend challeges you would like to participate in.</span>
+                <span id='erro-span-page3'>Please select your chalenge</span>
             </div>
 
             <div className='form'>
-                <div onClick={toggleButton} id="html-box" className='page-03-form'>
-                    <input id='html-checkbox' type="checkbox" name="html"/>
-                    <span>HTML/CSS/JS</span>
-                </div>
-
-                <div onClick={toggleButton} id="react-box" className='page-03-form' >
-                    <input id='react-checkbox' type="checkbox" name="react"/>
-                    <span>React JS</span>
-                </div>
-
-                <div className='page-03-form'  onClick={toggleButton} id="algular-box">
-                    <input id='angular-checkbox' type="checkbox" name="angular"/>
-                    <span>Angular JS</span>
-                </div>
-
-                <div className='page-03-form'  onClick={toggleButton} id="vue-box">
-                    <input id='vue-checkbox' type="checkbox" name="vue"/>
-                    <span>Vue JS</span>
-                </div>
+                <button id='html' name='HTML/CSS/JS' onClick={selectButton}>HTML/CSS/JS</button>
+                <button id='react' name='React JS' onClick={selectButton}>React JS</button>
+                <button id='angular' name='Angular' onClick={selectButton}>Angular</button>
+                <button id='vue' name='Vue' onClick={selectButton}>Vue</button>
             </div>
 
             <div className='div-bar'></div>
 
             <div className='button-div'>
                 <button onClick={backPage}>Go Back</button>
-                <button onClick={nextPage}>Next Step</button>  
+                <button onClick= {() => (formValues.chalenge != '') ? nextPage() : erroPage()}>Next Step</button>  
             </div> 
         </section>
     )

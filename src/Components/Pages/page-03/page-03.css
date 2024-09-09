@@ -26,3 +26,8 @@
 .form .page-03-form input[type='checkbox']:checked{
     background-color: #fc5d39;
 }
+
+#erro-span-page3{
+    color: red;
+    display: none;
+}

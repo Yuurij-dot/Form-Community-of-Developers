@@ -25,3 +25,8 @@
     border-radius: 50%;
     background-color: #fc5d39;
 }
+
+#erro-span-page2{
+    color: red;
+    display: none;
+}

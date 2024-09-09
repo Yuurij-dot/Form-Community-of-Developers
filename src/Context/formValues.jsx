@@ -8,7 +8,7 @@ const MyProvider = ({children}) => {
         email: '',
         phone: '',
         skill: '',
-        chalenge: [],
+        chalenge: '',
     })
 
     return(

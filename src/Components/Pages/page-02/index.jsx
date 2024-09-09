@@ -4,7 +4,7 @@ import '../Pages.css'
 import { useContext } from 'react'
 import { MyContext } from '../../../Context/formValues'
 
-import { backPage, nextPage } from './togglePages'
+import { backPage, nextPage, erroPage} from './togglePages'
 
 export function Page02(){
     const {formValues, setFormValues} = useContext(MyContext)
@@ -71,6 +71,8 @@ export function Page02(){
                 <h1></h1>
                 <h1>Skill Level</h1>
                 <span>Please tell us about your skill level in frontend development.</span>
+                <br />
+                <span id='erro-span-page2'>Please select your level in front end development</span>
             </div>
 
             <div className='form'>
@@ -84,7 +86,7 @@ export function Page02(){
 
             <div className='button-div'>
                 <button onClick={backPage}>Go Back</button>
-                <button onClick={nextPage}>Next Step</button>  
+                <button onClick={() => (formValues.skill != '') ? nextPage() : erroPage('Erro')} >Next Step</button>  
             </div> 
         </section>
     )
