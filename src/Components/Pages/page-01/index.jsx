@@ -71,6 +71,7 @@ export function Page01(){
             <div className='div-bar'></div>
 
             <div className='button-div'>
+                <div></div>
                 <button onClick={nextPage}>Next Step</button>  
             </div>        
 

@@ -83,7 +83,7 @@ export default function LevelForm(){
 
 
     return(
-        <div className='level-form'>
+        <div id='level-form' className='level-form'>
             <div className="level level-01">
                 <button id='button01'>1</button>
             </div>

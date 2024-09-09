@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { MyContext } from "../../../Context/formValues"
 
 import './styles.css'
-import { backPage } from "./tooglePage"
+import { backPage, submitForm} from "./tooglePage"
 
 export function Page04(){
     const {formValues, setFormValues} = useContext(MyContext)
@@ -46,7 +46,7 @@ export function Page04(){
 
             <div className='button-div'>
                 <button onClick={backPage}>Go Back</button>
-                <button>Submit</button>  
+                <button onClick={submitForm}>Submit</button>  
                 
             </div>         
         </section>
