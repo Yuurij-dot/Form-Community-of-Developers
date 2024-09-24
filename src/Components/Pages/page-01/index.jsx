@@ -70,8 +70,8 @@ export function Page01(){
 
             <div className='div-bar'></div>
 
-            <div className='button-div'>
-                <div></div>
+            <div className='button-div button-div-page1'>
+                <div className='invisible-div-button'></div>
                 <button onClick={nextPage}>Next Step</button>  
             </div>        
 

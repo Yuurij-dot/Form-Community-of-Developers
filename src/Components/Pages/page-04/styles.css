@@ -21,3 +21,9 @@
     font-weight: 500;
     color: #111;
 }
+
+@media screen and (max-width: 700px){
+    .content-confirm{
+        grid-template-columns: 1fr;
+    }
+}

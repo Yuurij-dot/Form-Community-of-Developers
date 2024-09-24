@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 import { Page01 } from './Components/Pages/page-01/index.jsx'
 import { Page02 } from './Components/Pages/page-02'
 import { Page03 } from './Components/Pages/page-03'
@@ -7,6 +8,9 @@ import { Page04 } from './Components/Pages/page-04'
 import FinalPage from './Components/Pages/final-page/index.jsx'
 
 import LevelForm from './Components/level-form/index.jsx'
+
+import './Styles/media.css'
+
 
 import MyProvider from './Context/formValues.jsx'
 
